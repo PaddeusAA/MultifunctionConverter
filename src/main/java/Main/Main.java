@@ -1,10 +1,10 @@
 package Main;
 
-import Calc.Calculator;
+import CalcAndConv.Calculator;
+import CalcAndConv.StartClass;
 
 public class Main {
     public static void main(String[] args) {
-
-        new Calculator().start();
+        new StartClass().start();
     }
 }

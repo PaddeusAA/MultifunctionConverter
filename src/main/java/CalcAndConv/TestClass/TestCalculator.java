@@ -1,5 +1,10 @@
-package Calc;
+package CalcAndConv.TestClass;
+import CalcAndConv.Calculator;
 
+/**
+ * Класс нужен для переопределения методов класса {@link Calculator} и последующего
+ * использования этих методов в тестировании через JUnit
+ */
 public class TestCalculator extends Calculator {
 
     @Override
