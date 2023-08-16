@@ -1,8 +1,5 @@
 package CalcAndConv;
 
-import java.nio.charset.Charset;
-import java.util.Scanner;
-
 /**
  * Это класс Калькулятор с стандартными методами такими как
  * <p>

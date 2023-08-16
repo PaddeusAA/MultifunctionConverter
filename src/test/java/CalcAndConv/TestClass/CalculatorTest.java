@@ -1,6 +1,5 @@
 package CalcAndConv.TestClass;
 
-import CalcAndConv.TestClass.TestCalculator;
 import org.junit.Test;
 import org.junit.Assert;
 

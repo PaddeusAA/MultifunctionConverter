@@ -1,7 +1,5 @@
 package Main;
 
-import CalcAndConv.Calculator;
-import CalcAndConv.NumberSystemConverter;
 import CalcAndConv.StartClass;
 
 public class Main {

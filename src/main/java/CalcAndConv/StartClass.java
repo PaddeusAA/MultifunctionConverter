@@ -35,12 +35,11 @@ public class StartClass {
                 switch (actionForApp) {
 
                     // Блок с Калькулятором
-                    case 1:
+                    case 1 -> {
                         //regionКалькулятор
 
                         int firstValue;
                         int secondValue;
-
                         System.out.println("\nЧто вы хотите сделать?\n" +
                                 "1) Сложение\n" +
                                 "2) Вычитание\n" +
@@ -48,8 +47,6 @@ public class StartClass {
                                 "4) Деление\n" +
                                 "5) Закрыть калькулятор\n");
                         int actionForCalculator = in.nextInt();
-
-
                         if (actionForCalculator == 1) { // сложение
                             System.out.println("Введите 2 числа");
                             firstValue = in.nextInt();
@@ -89,14 +86,12 @@ public class StartClass {
                         } else {
                             System.err.println("Некорректный ввод");
                         }
-                        //endregion
-                        break;
-
-                    case 2:
+                    }
+                    //endregion
+                    case 2 -> {
                         //region Системы счисления
 
                         String number;
-
                         System.out.println("\nИз какой системы счисления вы переводите?\n" +
                                 "1) Десятичная\n" +
                                 "2) Двоичная\n" +
@@ -104,122 +99,86 @@ public class StartClass {
                                 "4) Шестнадцатеричная\n" +
                                 "5) Закрыть калькулятор\n");
                         String firstAction = in.next();
-
                         if (firstAction.equals("5")) {
                             exitConverter = true;
                             break;
                         }
-
-
                         System.out.println("\nВ какую систему счисления вы переводите?\n" +
                                 "1) Десятичная\n" +
                                 "2) Двоичная\n" +
                                 "3) Восьмеричная\n" +
                                 "4) Шестнадцатеричная\n");
-
                         int actionForConverter = Integer.parseInt((firstAction + in.next()));
-
                         switch (actionForConverter) {
-
-                            case 12:
+                            case 12 -> {
                                 System.out.println("Введите число");
                                 number = in.next();
                                 nsc.decimalToBinary(number);
-
-                                break;
-
-                            case 13:
+                            }
+                            case 13 -> {
                                 System.out.println("Введите число");
                                 number = in.next();
                                 nsc.decimalToOctal(number);
-
-                                break;
-
-                            case 14:
+                            }
+                            case 14 -> {
                                 System.out.println("Введите число");
                                 number = in.next();
                                 nsc.decimalToHex(number);
-
-                                break;
-
-                            case 21:
+                            }
+                            case 21 -> {
                                 System.out.println("Введите число");
                                 number = in.next();
                                 nsc.binaryToDecimal(number);
-
-                                break;
-
-                            case 23:
+                            }
+                            case 23 -> {
                                 System.out.println("Введите число");
                                 number = in.next();
                                 nsc.binaryToOctal(number);
-
-                                break;
-
-                            case 24:
+                            }
+                            case 24 -> {
                                 System.out.println("Введите число");
                                 number = in.next();
                                 nsc.binaryToHex(number);
-
-                                break;
-
-
-                            case 31:
+                            }
+                            case 31 -> {
                                 System.out.println("Введите число");
                                 number = in.next();
                                 nsc.octalToDecimal(number);
-
-                                break;
-
-                            case 32:
+                            }
+                            case 32 -> {
                                 System.out.println("Введите число");
                                 number = in.next();
                                 nsc.octalToBinary(number);
-
-                                break;
-
-                            case 34:
+                            }
+                            case 34 -> {
                                 System.out.println("Введите число");
                                 number = in.next();
                                 nsc.octalToHex(number);
-
-                                break;
-
-
-                            case 41:
+                            }
+                            case 41 -> {
                                 System.out.println("Введите число");
                                 number = in.next();
                                 nsc.hexToDecimal(number);
-
-                                break;
-
-                            case 42:
+                            }
+                            case 42 -> {
                                 System.out.println("Введите число");
                                 number = in.next();
                                 nsc.hexToBinary(number);
-
-                                break;
-
-                            case 43:
+                            }
+                            case 43 -> {
                                 System.out.println("Введите число");
                                 number = in.next();
                                 nsc.hexToOctal(number);
-
-                                break;
-
-                            default:
-                                System.err.println("Вы ввели некорректное число");
-                                break;
-
+                            }
+                            default -> System.err.println("Вы ввели некорректное число");
                         }
+                    }
 
-                        //endregion
-                        break;
-
-                    default:
+                    //endregion
+                    default -> {
                         System.err.println("Вы ввели некорректное число");
                         exitConverter = true;
-                        break;
+                    }
                 }
             }
 
